@@ -1,5 +1,6 @@
 package nurse.pals;
 
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -29,7 +30,6 @@ import javax.swing.JTextArea;
 import javax.swing.JTable;
 
 public class NursePalsGui implements ActionListener {
-
 	private JFrame frame;
 	private JTextField fName;
 	private JTextField lName;
@@ -83,10 +83,8 @@ public class NursePalsGui implements ActionListener {
 	 */
 	public NursePalsGui(String s) {
 		this.user = s;
-
 		initialize();
 		frame.setVisible(true);
-
 	}
 
 	/**
@@ -104,7 +102,7 @@ public class NursePalsGui implements ActionListener {
 		frame.getContentPane().add(panel);
 		panel.setLayout(null);
 
-/// Scrollable text area that displays summary of current patient record
+// Scrollable text area that displays summary of current patient record
 		txtrPatienSummary = new JTextArea();
 		JScrollPane scrollPatientSummary = new JScrollPane(txtrPatienSummary);
 		txtrPatienSummary.setText("Patient Summary\nLast Name: Doe\nFirst Name: John \nDOB: 1967/4/23\nRoom:301");
@@ -114,12 +112,14 @@ public class NursePalsGui implements ActionListener {
 		JTabbedPane tabbedPane = new JTabbedPane(JTabbedPane.TOP);
 		tabbedPane.setBounds(278, 67, 646, 510);
 		frame.getContentPane().add(tabbedPane);
-/// Patient search panel
+// Patient search panel
 		JPanel panel_1 = new JPanel();
 		tabbedPane.addTab("Patient Search", null, panel_1, null);
 		panel_1.setLayout(null);
 
 		JLabel lblPatientSearch = new JLabel("Patient Search");
+		lblPatientSearch.setBackground(Color.GREEN);
+		lblPatientSearch.setOpaque(true);
 		lblPatientSearch.setBounds(272, 14, 88, 16);
 		panel_1.add(lblPatientSearch);
 
@@ -144,19 +144,27 @@ public class NursePalsGui implements ActionListener {
 		addressTxt.setColumns(10);
 
 		JLabel lblNewLabel = new JLabel("First Name");
+		lblNewLabel.setBackground(Color.GREEN);
+		lblNewLabel.setOpaque(true);
 		lblNewLabel.setBounds(47, 55, 77, 13);
 		panel_1.add(lblNewLabel);
 
 		JLabel lblLastName = new JLabel("Last Name");
+		lblLastName.setBackground(Color.GREEN);
+		lblLastName.setOpaque(true);
 		lblLastName.setBounds(194, 53, 77, 16);
 		panel_1.add(lblLastName);
 
 		JLabel lblSsn = new JLabel("SSN");
+		lblSsn.setBackground(Color.GREEN);
+		lblSsn.setOpaque(true);
 		lblSsn.setBounds(333, 53, 61, 16);
 		panel_1.add(lblSsn);
 
 		JLabel lblAddress = new JLabel("Address");
 		lblAddress.setBounds(47, 112, 61, 16);
+		lblAddress.setBackground(Color.GREEN);
+		lblAddress.setOpaque(true);
 		panel_1.add(lblAddress);
 
 		JButton searchBtn = new JButton("Search");
@@ -164,7 +172,7 @@ public class NursePalsGui implements ActionListener {
 		panel_1.add(searchBtn);
 		searchBtn.addActionListener(this);
 
-		/// Table
+		// Table
 		String col[] = { "ID", "First Name", "Last Name", "M", "SSN", "DOB", "Height", "Weight", "Sex", "Address",
 				"Primay Physician" };
 
@@ -200,9 +208,7 @@ public class NursePalsGui implements ActionListener {
 							+ "\n" + "M: " + i3 + "\n" + "SSN: " + i4 + "\n" + "DOB: " + i5 + "\n" + "Height: " + i6
 							+ "\n" + "Weight: " + i7 + "\n" + "Sex: " + i8 + "\n" + "Address: " + i9 + "\n"
 							+ "Primay Physician: " + i10);
-
 				}
-
 			}
 		});
 
@@ -229,10 +235,14 @@ public class NursePalsGui implements ActionListener {
 
 		JLabel lblChooseRxType = new JLabel("Dosage Form");
 		lblChooseRxType.setBounds(23, 93, 110, 16);
+		lblChooseRxType.setBackground(Color.GREEN);
+		lblChooseRxType.setOpaque(true);
 		panel_2.add(lblChooseRxType);
 
 		JLabel lblRxName = new JLabel("RX Name");
 		lblRxName.setBounds(23, 38, 61, 16);
+		lblRxName.setBackground(Color.GREEN);
+		lblRxName.setOpaque(true);
 		panel_2.add(lblRxName);
 
 		rxNameIn = new JTextField();
@@ -240,9 +250,11 @@ public class NursePalsGui implements ActionListener {
 		panel_2.add(rxNameIn);
 		rxNameIn.setColumns(10);
 
-		JLabel lblRxStrenght = new JLabel("Strength");
-		lblRxStrenght.setBounds(23, 66, 61, 16);
-		panel_2.add(lblRxStrenght);
+		JLabel lblRxStrength = new JLabel("Strength");
+		lblRxStrength.setBounds(23, 66, 61, 16);
+		lblRxStrength.setBackground(Color.GREEN);
+		lblRxStrength.setOpaque(true);
+		panel_2.add(lblRxStrength);
 
 		rxStrenghtIn = new JTextField();
 		rxStrenghtIn.setColumns(10);
@@ -251,6 +263,8 @@ public class NursePalsGui implements ActionListener {
 
 		JLabel lblQty = new JLabel("Dispense Qty");
 		lblQty.setBounds(23, 123, 92, 16);
+		lblQty.setBackground(Color.GREEN);
+		lblQty.setOpaque(true);
 		panel_2.add(lblQty);
 
 		rxDispenseQtyIn = new JTextField();
@@ -260,6 +274,8 @@ public class NursePalsGui implements ActionListener {
 
 		JLabel lblPersname = new JLabel("Prescriber Name");
 		lblPersname.setBounds(341, 35, 110, 16);
+		lblPersname.setBackground(Color.GREEN);
+		lblPersname.setOpaque(true);
 		panel_2.add(lblPersname);
 
 		rxPrescriberNmIn = new JTextField();
@@ -269,6 +285,8 @@ public class NursePalsGui implements ActionListener {
 
 		JLabel lblDea = new JLabel("DEA #");
 		lblDea.setBounds(341, 63, 61, 16);
+		lblDea.setBackground(Color.GREEN);
+		lblDea.setOpaque(true);
 		panel_2.add(lblDea);
 
 		rxPrescriberDeaIn = new JTextField();
@@ -278,6 +296,8 @@ public class NursePalsGui implements ActionListener {
 
 		JLabel lblPrescriberAddress = new JLabel("Prescriber Address");
 		lblPrescriberAddress.setBounds(341, 96, 130, 16);
+		lblPrescriberAddress.setBackground(Color.GREEN);
+		lblPrescriberAddress.setOpaque(true);
 		panel_2.add(lblPrescriberAddress);
 
 		rxPrescriberAddrIn = new JTextField();
@@ -287,6 +307,8 @@ public class NursePalsGui implements ActionListener {
 
 		JLabel lblPhone = new JLabel("Phone #");
 		lblPhone.setBounds(341, 128, 61, 16);
+		lblPhone.setBackground(Color.GREEN);
+		lblPhone.setOpaque(true);
 		panel_2.add(lblPhone);
 
 		rxPresciberPhIn = new JTextField();
@@ -296,6 +318,8 @@ public class NursePalsGui implements ActionListener {
 
 		JLabel lblDate = new JLabel("Date");
 		lblDate.setBounds(341, 161, 130, 16);
+		lblDate.setBackground(Color.GREEN);
+		lblDate.setOpaque(true);
 		panel_2.add(lblDate);
 
 		DateFormat sformat = new SimpleDateFormat("dd/MM/yyyy");
@@ -311,6 +335,8 @@ public class NursePalsGui implements ActionListener {
 
 		JLabel lblRefill = new JLabel("Refill");
 		lblRefill.setBounds(23, 161, 61, 16);
+		lblRefill.setBackground(Color.GREEN);
+		lblRefill.setOpaque(true);
 		panel_2.add(lblRefill);
 
 		rxRefillQty = new JTextField();
@@ -334,6 +360,8 @@ public class NursePalsGui implements ActionListener {
 
 		JLabel lblRx = new JLabel("RX");
 		lblRx.setBounds(310, 6, 16, 16);
+		lblRx.setBackground(Color.GREEN);
+		lblRx.setOpaque(true);
 		panel_2.add(lblRx);
 
 // Administer Tab
@@ -343,6 +371,8 @@ public class NursePalsGui implements ActionListener {
 
 		JLabel lblPrescriptions = new JLabel("Prescription");
 		lblPrescriptions.setBounds(45, 44, 82, 16);
+		lblPrescriptions.setBackground(Color.GREEN);
+		lblPrescriptions.setOpaque(true);
 		panel_3.add(lblPrescriptions);
 
 		selectRx = new JComboBox(prescriptions.toArray());
@@ -357,6 +387,8 @@ public class NursePalsGui implements ActionListener {
 
 		JLabel lblCalculate = new JLabel("Calculate ");
 		lblCalculate.setBounds(45, 201, 82, 16);
+		lblCalculate.setBackground(Color.GREEN);
+		lblCalculate.setOpaque(true);
 		panel_3.add(lblCalculate);
 
 		JPanel panel_4 = new JPanel();
@@ -385,30 +417,23 @@ public class NursePalsGui implements ActionListener {
 
 	public void translate() {
 		// TODO Auto-generated method stub
-
 	}
 
-//Button Action listeners
+// Button Action listeners
 	@Override
 	public void actionPerformed(ActionEvent e) {
 
 		String btnCall = e.getActionCommand();
 
 		if (btnCall.equals("Search")) {
-
 			firstName = fName.getText();
 			lastName = lName.getText();
 			address = addressTxt.getText();
 			
 			if (tableModel.getRowCount() != 0) {
 				tableModel.setRowCount(0);
-				
 			}
 				addPatients();
-
-			
-			
-			
 
 			// Patient searchP = new Patient(firstName, lastName, address);
 
@@ -416,11 +441,9 @@ public class NursePalsGui implements ActionListener {
 			 * for (Patient i : patients) { if (i.getFirstName().equals(firstName)) {
 			 * txtrPatienSummary.append(i.toString()); } }
 			 */
-
 		}
 
 		if (btnCall.equals("Log Out")) {
-			
 			int reply = JOptionPane.showConfirmDialog(
 				    frame,
 				    "Are you sure you want to log out?",
@@ -428,13 +451,9 @@ public class NursePalsGui implements ActionListener {
 				    JOptionPane.YES_NO_OPTION);
 			if (reply == JOptionPane.YES_OPTION) {
 				Login login = new Login();
-
-				frame.setVisible(false);
-				
+				frame.setVisible(false);	
 			}
-			
 			// System.exit(0);
-
 		}
 		Prescription rx = null;
 		if (btnCall.equals("Review")) {
@@ -466,16 +485,13 @@ public class NursePalsGui implements ActionListener {
 				JOptionPane.showMessageDialog(null, "Please fill out all data fields");
 				// TODO: handle exception
 			}
-
 		}
 		if (btnCall.equals("Enter")) {
 			if (displayRx.getText().equals(" ")) {
 				JOptionPane.showMessageDialog(null, "Please 'Review' data first.");
 			}
 			prescriptions.add(rx);
-
 		}
-
 	}
 
 //Method that adds patients to our table
@@ -488,10 +504,22 @@ public class NursePalsGui implements ActionListener {
 				"622 Greensburg St", "Dr.Olsen");
 		Patient p4 = new Patient(00004, "Author", "Olumade", 'A', 889097654, "12/02/1990", 183, 160, 'M', "543 Main St",
 				"Dr.Oluwolu");
+		Patient p5 = new Patient(00005, "Hank", "Hill", 'R', 1997006789, "08/14/1997", 150, 150, 'M', "997 Propane Ave",
+				"Dr.Strickland");
+		Patient p6 = new Patient(00006, "Dale", "Gribble", 'A', 1998007821, "06/02/1998", 170, 170, 'M', "931 Tech St",
+				"Dr.Shackleford");
+		Patient p7 = new Patient(00007, "Bill", "Dauterive", 'S', 2001002234, "07/11/1999", 160, 160, 'M', "567 Army St",
+				"Dr.Anderson");
+		Patient p8 = new Patient(8, "Jeff", "Boomhauer", 'D', 1999005432, "05/31/2000", 140, 140, 'M', "700 Blur Ave",
+				"Dr.Patch");
 		patients.add(p1);
 		patients.add(p2);
 		patients.add(p3);
 		patients.add(p4);
+		patients.add(p5);
+		patients.add(p6);
+		patients.add(p7);
+		patients.add(p8);
 		/*
 		 * long id = 0; String fristN = null; String lastN= null; char ini= ' '; long
 		 * social= 0; String dob= null; double weight= 0.0; double height= 0.0; char
@@ -512,8 +540,6 @@ public class NursePalsGui implements ActionListener {
 			String doc = patients.get(i).getPrimaryDoctor();
 			Object [] data = new Object[] { id, fristN, lastN, ini, social, dob, weight, height, sex, addr, doc };
 			tableModel.addRow(data);
-
-		}
-		
+		}	
 	}
 }

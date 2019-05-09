@@ -1,7 +1,6 @@
 package nurse.pals;
 
 public class Nurse extends User {
-
 	private String firstName;
 	private String LastName;
 	private String[] education;
@@ -54,14 +53,4 @@ public class Nurse extends User {
 	public void setLicense(String[] license) {
 		this.license = license;
 	}
-	
-
-
-
-
-
-
-
-
-
 }

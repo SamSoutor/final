@@ -27,7 +27,6 @@ import java.util.Collections;
 import java.util.Scanner;
 
 public class Login extends JFrame implements ActionListener {
-
 	private JFrame frame;
 	private JPanel contentPane;
 	private JTextField userTxt;
@@ -50,15 +49,11 @@ public class Login extends JFrame implements ActionListener {
 				}
 			}
 		});
-
 	}
 
 	/**
 	 * Create the frame.
 	 */
-	
-	
-
 	public Login() {
 		frame = new JFrame();
 		frame.setVisible(true);
@@ -153,17 +148,10 @@ public class Login extends JFrame implements ActionListener {
 			if (reply == JOptionPane.YES_OPTION) {
 				Login login = new Login();
 
-				System.exit(0);
-				
+				System.exit(0);	
 			}
-			
-
-			
-
 		}
-
 		// TODO Auto-generated method stub
-
 	}
 
 	// Key Adapter for reads key pressed then sends action to login button
@@ -215,7 +203,6 @@ public class Login extends JFrame implements ActionListener {
 				User u = new User(username, password);
 
 				users.add(u);
-
 			}
 
 		} catch (FileNotFoundException e) {
@@ -239,5 +226,4 @@ public class Login extends JFrame implements ActionListener {
 	public void setUserTxt(JTextField userTxt) {
 		this.userTxt = userTxt;
 	}
-
 }

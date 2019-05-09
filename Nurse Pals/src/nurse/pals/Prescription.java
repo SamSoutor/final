@@ -27,8 +27,6 @@ public class Prescription {
 		super();
 	}
 	
-	
-	
 	public Prescription(String name, String strenght, String type, int dispenseQty, int refill, String prescriberName,
 			String dea, String address, long phone, String prescriptionDate) {
 		super();
@@ -104,18 +102,13 @@ public class Prescription {
 		this.prescriptionDate = prescriptionDate;
 	}
 	
-	
 	public String getType() {
 		return type;
 	}
 
-
-
 	public void setType(String type) {
 		this.type = type;
 	}
-
-
 
 	@Override
 	public String toString() {
@@ -124,10 +117,4 @@ public class Prescription {
 				+ prescriptionDate + "\n" + "Prescription " + "\n" + " Name: " + name + "\n" + " Strenght: " + strenght + "\n" +" Dosage Form: " + type
 				+ "\n" + " Dispense Qty:" + dispenseQty + "\n" + " Refill: " + refill;
 	}
-	
-	
-	
-	
-	
-
 }

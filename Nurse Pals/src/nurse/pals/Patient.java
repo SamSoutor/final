@@ -4,10 +4,7 @@ import java.awt.List;
 import java.util.ArrayList;
 import java.util.Comparator;
 
-import edu.century.pa5.Product;
-
 public class Patient {
-	
 	private long id;
 	private String firstName;
 	private String lastName;
@@ -21,8 +18,6 @@ public class Patient {
 	private String primaryDoctor;
 	private String pharmacy;
 	private String emergencyContact;
-	
-	
 	
 	public Patient(long id, String firstName, String lastName, char middleInitial, long SSN, String dOB, double height,
 			double weight, char sex, String address, String primaryDoctor) {
@@ -40,11 +35,9 @@ public class Patient {
 		this.primaryDoctor = primaryDoctor;
 	}
 	
-	
 	public Patient() {
 		super();
 	}
-	
 	
 	public Patient(String firstName, String lastName, long SSN, String address) {
 		super();
@@ -53,23 +46,7 @@ public class Patient {
 		this.SSN= SSN;
 		this.address = address;
 	}
-	 
-	
-	
-	
-	
-
-
-
-
-	
-
-
-	
-
-	
-	
-	
+		
 	public long getId() {
 		return id;
 	}
@@ -118,7 +95,6 @@ public class Patient {
 	public void setWeight(double weight) {
 		this.weight = weight;
 	}
-
 	public char getSex() {
 		return sex;
 	}
@@ -150,16 +126,10 @@ public class Patient {
 		this.emergencyContact = emergencyContact;
 	}
 	
-	
-	
-	
-	
-	
 	@Override
 	public String toString() {
 		return  firstName + lastName + SSN +  address;
 	}
-
 
 	public String toAllString() {
 		return "Patient [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", middleInitial="
@@ -167,8 +137,6 @@ public class Patient {
 				+ ", sex=" + sex + ", address=" + address + ", primaryDoctor=" + primaryDoctor + ", pharmacy="
 				+ pharmacy + ", emergencyContact=" + emergencyContact + "]";
 	}
-
-	
 	
 	public static Comparator<Patient> CompareByFirstName = new Comparator<Patient>() {
 		@Override
@@ -183,11 +151,4 @@ public class Patient {
                 && this.lastName.equals(((Patient) obj).lastName)&&
                 this.address.equals(((Patient) obj).address));
     }
-	
-    }
-
-	
-	
-	
-
-
+}
